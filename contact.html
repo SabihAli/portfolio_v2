@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Contact Me</title>
+    <link rel="stylesheet" href="css/style.css">
+            <!-- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        } -->
+       
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="gallery.html">Image Gallery</a></li>
+                    <li><a href="skills.html">Personal Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <div class="container">
+                <div class="page-header">
+                    <h1>Get In Touch</h1>
+                    <p>I'm always open to discussing new projects and opportunities</p>
+                </div>
+                
+                <div class="contact-container">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2><i class="fas fa-info-circle"></i> Contact Information</h2>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    sabih.ali.9000@gmail.com
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    +92 3077999467
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address</strong><br>
+                                    SEECS, NUST, H-12
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Availability</strong><br>
+                                    Mon - Fri: 9AM - 5PM
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <h3 style="margin-top: 25px;">Connect with me</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.819350313896!2d73.0383145751731!3d33.64243073942106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df952e59a3f1e5%3A0x5df2a3d2de2b7a4!2sNational%20University%20of%20Sciences%20%26%20Technology%20(NUST)%20-%20H-12%20Campus!5e0!3m2!1sen!2s!4v1692450000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="index.html" class="btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            <p>Let's create something amazing together</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (name && email && subject && message) {
+                // In a real application, you would send this data to a server
+                alert('Thank you for your message! I will get back to you soon.');
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
